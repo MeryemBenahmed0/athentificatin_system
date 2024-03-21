@@ -1,0 +1,68 @@
+.notification-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-button {
+  margin: 10px; /* Espacement entre les boutons */
+}
+
+.notification-button button {
+  padding: 10px;
+  background-color: #53baa7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 9pt;
+  font-family: inherit;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.notification-button button:hover {
+  background-color: #45a049;
+}
+
+.notification-button button::before,
+.notification-button button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: #195b4b;
+  transition: 1s ease;
+}
+
+.notification-button button::before {
+  top: -1em;
+  left: -1em;
+}
+
+.notification-button button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.notification-button button:hover::before,
+.notification-button button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.notification-button button:hover {
+  color: rgb(255, 255, 255);
+}
+
+.notification-button button:active {
+  filter: brightness(.8);
+}
