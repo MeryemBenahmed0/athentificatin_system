@@ -8,8 +8,7 @@ const Sidebar = ({ hasNotifications }) => {
       <ul>
         <li>
           <a href="/" className="logo">
-            <img src="./Pic/photo2.jpg" alt="Logo" />
-            <span className="nav-item">User</span>
+            <span className="nav-itemm"></span>
             {hasNotifications && <span className="notification-indicator"></span>}
           </a>
         </li>
@@ -20,7 +19,7 @@ const Sidebar = ({ hasNotifications }) => {
           </a>
         </li>
         <li>
-          <a href="/Message">
+          <a href="/Stockk">
             <i className="fas fa-save"></i>
             <span className="nav-item">Gestion du stock</span>
           </a>

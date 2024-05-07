@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaBriefcaseMedical } from "react-icons/fa6";
 
 
+
 const Dashbord = () => {
   const history = useHistory();
 
@@ -137,7 +138,7 @@ const Dashbord = () => {
                     <td>{medicine.hours}</td>
                     <td>{medicine.price} DA</td>
                     <td>
-                      <span  onClick={() => showMedicineDetails(medicine)}><FaBriefcaseMedical />
+                      <span  onClick={() => showMedicineDetails(medicine)}  style={{ color:'#E36352'}}><FaBriefcaseMedical />
 
                         
                     

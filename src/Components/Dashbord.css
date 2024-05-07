@@ -24,7 +24,7 @@ body {
 }
 .cardBox .card {
   position: relative;
-  background: transparent;
+  background: #ffffff57;
   padding: 10px;
   border-radius: 15px;
   display: flex;
@@ -34,7 +34,7 @@ body {
 }
 
 .cardBox .card:hover {
-  background:#efb89ede;
+  background:#6E72FF;
 }
 
 .cardBox .card:hover .numbers,
@@ -76,9 +76,7 @@ body {
   cursor: pointer;
 }
 
-.attendance {
-  margin-top: 20px;
-}
+
 
 .attendance-list {
   margin-bottom: 20px;
@@ -145,24 +143,21 @@ input{
   border-radius: 10px;
   font-size: 17px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: #7e97b8;
- background-color: #e0e8ef9f;
- border-style: solid;
- border-width: 2px 2px 2px 2px;
- border-color: rgba(255, 255, 255, 0.333);
- border-radius: 40px 40px 40px 40px;
- transform: translate(0px, 0px) rotate(0deg);
- transition: 0.2s;
- box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgba(8, 23, 41, 0.383);
-  
+  color: #412945;
+  background-color: #ccd8ddd4;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+  border-color: rgba(255, 255, 255, 0.818);
+  border-radius: 20px 20px 20px 20px;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: 0.2s;
   cursor: pointer;
 }
 
 .search-container.active input {
-  border-color: 2px solid #ccd8dd;
+   
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: none;
-    border-radius: 40px 40px 40px 40px;
     outline: none;
     background-color: transparent;
     box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3), -4px -2px 16px 0px #ffffff8e, 4px 2px 16px 0px rgba(8, 23, 41, 0.383);
@@ -170,18 +165,6 @@ input{
  /* Example of changing border color when active */
 }
 
-.search-container .search-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0.483); /* Example of styling the search line */
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-  
-  
-}
 
 .search-container.active .search-line {
   transform: scaleX(1);
@@ -232,9 +215,13 @@ input{
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  
 }
 
 .card {
+  background: #fff;
+  position: relative;
+  padding-right: 50px;
   width: 31%; /* Ajuste la largeur des cartes */
   border-radius: 10px;
   padding: 20px;
@@ -245,9 +232,9 @@ input{
   border-top: 1px solid rgba(255,255,255,0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(5px);
-  
-  
+
 }
+
 
 .card:hover {
   transform: translateY(-5px);
@@ -259,14 +246,14 @@ input{
 .numbers {
   font-size: 24px;
   font-weight: bold;
-  color: rgb(229, 231, 238);
+  color: #13242d;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .cardName {
   font-size: 20px;
   margin-top: 4px;
-  color: #e1e5e7;
+  color: #13242d;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
   
@@ -289,6 +276,7 @@ input{
   border-right: 1px solid rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(8px);
   transition: 0.3s ease;
+  background: #ffffff5d;
 }
 
 .attendance-list h1 {
@@ -340,10 +328,10 @@ table th, table td {
 }
 
 .table th {
-  background-color: #e0e8ef;
+  background-color: #ccd8ddd4;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 18px;
-  color: #7e97b8;}
+  color: #412945;}
 
 .table td {
   border-color: transparent;
@@ -411,13 +399,12 @@ table tbody tr:hover {
   margin: 0 5px;
   padding: 5px 10px;
   border: 1px solid transparent;
-  color: #7e97b8;
- background-color: #e0e8ef62;
+  color: #412945;
+ background-color: #B5E1E8;
  border-style: solid;
  border-width: 2px 2px 2px 2px;
  border-color: rgba(255, 255, 255, 0.333);
  border-radius: 10px 10px 10px 10px;
-
  transform: translate(0px, 0px) rotate(0deg);
  transition: 0.2s;
  box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgba(95, 156, 231, 0.383);
@@ -439,7 +426,8 @@ table tbody tr:hover {
 }
 
 .btn:hover {
-  background-color: #e0e8ef
+  background-color: #6E72FF;
+  color : white;
 }
 
 .mine {
@@ -506,7 +494,8 @@ table tbody tr:hover {
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.25);
   border-top: 1px solid rgba(255, 255, 255, 0.62);
   border-right: 1px solid rgba(255, 255, 255, 0.5);
-  -webkit-backdrop-filter: blur(8px);
+  
+  background-color: rgba(247, 19, 19, 0.39);
   
 }
 

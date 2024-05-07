@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './Message.css';
-import { FaTrash, FaEdit } from 'react-icons/fa'; // Import des icônes de Font Awesome
+import { FaTrash } from 'react-icons/fa'; // Import des icônes de Font Awesome
 import { useHistory } from 'react-router-dom';
-import { FaEye, FaShoppingCart, FaMoneyBill, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Delete from '../icons/Delete';
-import { MdDelete } from "react-icons/md";
 import { FaRegPenToSquare } from "react-icons/fa6";
+import { AiOutlineDelete, AiOutlineEdit } from 'react-icons/ai'; // Import icons from Ant Design Icons
 
 
 
 const Message = () => {
+  const [selectedCategory] = useState(null);
+
   const history = useHistory();
   const [allMedicaments, setAllMedicaments] = useState([]);
  const [currentPage, setCurrentPage] = useState(1);

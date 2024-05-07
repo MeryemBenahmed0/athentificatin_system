@@ -81,7 +81,7 @@ const SaleHistory = () => {
     <div className='content'>
     <section className="main">
     <section className="attendance">
-    <div className="attendance-listt">
+    <div className="attendance-list">
     <div className="sale-history-container">
       <h1 >Historique des Ventes de Médicaments</h1>
       <div className="search-container">
@@ -91,7 +91,7 @@ const SaleHistory = () => {
           onChange={handleSearchDateChange}
         />
       </div>
-      <table>
+      <table className='table'>
         <thead>
           <tr>
             <th>ID</th>

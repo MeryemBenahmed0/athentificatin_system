@@ -1,5 +1,5 @@
 export {default as Sidebar} from './Sidebar'
-export {default as Message} from './Message'
+export {default as Stockk} from './Stockk'
 export {default as Dashbord} from'./Dashbord' 
 export {default as Presence} from './Presence'
 export {default as Reglages} from './Reglages'

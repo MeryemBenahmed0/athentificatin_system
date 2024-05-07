@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Sidebar, Dashbord, Message, Reglages, Presence, LineChart, Notification} from './Index'; 
+import { Sidebar, Dashbord, Stockk, Reglages, Presence, LineChart, Notification} from './Index'; 
 import { SaleHistory } from './Index';
+
 //import { ColorModeContext,useMode } from "./Theme";
 
 function All_app() {
@@ -16,7 +17,7 @@ function All_app() {
           <Switch>
             <Route exact path="/" component={Dashbord}/>
             <Route path="/Reglages" component={Reglages}/>
-            <Route path="/Message" component={Message}/>
+            <Route path="/Stockk" component={Stockk}/>
             <Route path="/Presence" component={Presence}/>
             <Route path="/SaleHistory" component={SaleHistory}/>
 

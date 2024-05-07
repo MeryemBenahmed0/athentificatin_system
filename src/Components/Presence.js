@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Presence.css';
+import './Dashbord.css';
 
 const Presence = () => {
   const allMedicaments = [
@@ -76,17 +77,17 @@ const Presence = () => {
      <div className='content'>
     <section className="main">
     <section className="attendance">
-    <div className="attendance-listt">
+    <div className="attendance-list">
     <div className="container">
       <div className="medicaments">
         <h2>Médicaments disponibles</h2>
-      <div className='.search-container'> <input
+      <div className="search-container"> <input
           type="text"
           placeholder="Rechercher un médicament..."
           value={searchTerm}
           onChange={handleSearch}
         /></div>
-        <table>
+        <table className='table'>
           <thead>
             <tr>
               <th>Nom</th>
@@ -112,13 +113,13 @@ const Presence = () => {
   <p class="text">Add to cart</p></button>
                 </td>
               </tr>
-            ))}
+          ))}
           </tbody>
         </table>
       </div>
       <div className="panier">
         <h2>Panier</h2>
-        <table>
+        <table className='table'>
           <thead>
             <tr>
               <th>Nom</th>
@@ -142,10 +143,10 @@ const Presence = () => {
         </table>
         <div>
           <h3>Total: {totalPanier} DA</h3>
-          <button onClick={() => alert("Commande passée avec succès !")}>Finaliser la présence</button>
+          <button className='btn' onClick={() => alert("Commande passée avec succès !")}>Finaliser la présence</button>
         </div>
       </div>
-    </div> </div></section></section></div>
+       </div></div></section></section></div>
   );
 }
 

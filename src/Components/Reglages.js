@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Reglages.css';
+import './Sidebar.css';
 
-const ChangePassword = ({ language }) => {
+const ChangePassword = () => {
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmNewPassword, setConfirmNewPassword] = useState('');
@@ -13,9 +14,9 @@ const ChangePassword = ({ language }) => {
 
   return (
     <div className="change-password-container">
-      <h2>{language === 'fr' ? 'Changer le mot de passe' : 'Change Password'}</h2>
+      <h2> Changer le mot de passe </h2>
       <div className="password-input">
-        <label htmlFor="currentPassword">{language === 'fr' ? 'Mot de passe actuel' : 'Current Password'}:</label>
+        <label htmlFor="currentPassword"> 'Mot de passe actuel'</label>
         <input
           type="password"
           id="currentPassword"
@@ -24,7 +25,7 @@ const ChangePassword = ({ language }) => {
         />
       </div>
       <div className="password-input">
-        <label htmlFor="newPassword">{language === 'fr' ? 'Nouveau mot de passe' : 'New Password'}:</label>
+        <label htmlFor="newPassword"> 'Nouveau mot de passe'</label>
         <input
           type="password"
           id="newPassword"
@@ -34,7 +35,7 @@ const ChangePassword = ({ language }) => {
       </div>
       <div className="password-input">
         <label htmlFor="confirmNewPassword">
-          {language === 'fr' ? 'Confirmer le nouveau mot de passe' : 'Confirm New Password'}:
+         Confirmer le nouveau mot de passe'
         </label>
         <input
           type="password"
@@ -43,8 +44,8 @@ const ChangePassword = ({ language }) => {
           onChange={(e) => setConfirmNewPassword(e.target.value)}
         />
       </div>
-      <button onClick={handleChangePassword}>
-        {language === 'fr' ? 'Changer le mot de passe' : 'Change Password'}
+      <button className='btn'  onClick={handleChangePassword}>
+        Changer le mot de passe
       </button>
     </div>
   );
@@ -61,9 +62,9 @@ const ChangeUsername = ({ language }) => {
 
   return (
     <div className="change-username-container">
-      <h2>{language === 'fr' ? 'Changer le nom d\'utilisateur' : 'Change Username'}</h2>
+      <h2>Changer le nom de'utilisateur </h2>
       <div className="username-input">
-        <label htmlFor="currentUsername">{language === 'fr' ? 'Nom d\'utilisateur actuel' : 'Current Username'}:</label>
+        <label htmlFor="currentUsername"> Nom d\'utilisateur actuel </label>
         <input
           type="text"
           id="currentUsername"
@@ -72,7 +73,7 @@ const ChangeUsername = ({ language }) => {
         />
       </div>
       <div className="username-input">
-        <label htmlFor="newUsername">{language === 'fr' ? 'Nouveau nom d\'utilisateur' : 'New Username'}:</label>
+        <label htmlFor="newUsername" > Nouveau nom d\'utilisateur </label>
         <input
           type="text"
           id="newUsername"
@@ -80,31 +81,29 @@ const ChangeUsername = ({ language }) => {
           onChange={(e) => setNewUsername(e.target.value)}
         />
       </div>
-      <button onClick={handleChangeUsername}>
-        {language === 'fr' ? 'Changer le nom d\'utilisateur' : 'Change Username'}
+      <button className='btn' onClick={handleChangeUsername}>
+        Changer le nom d'utilisateur
       </button>
     </div>
   );
 };
 
-const LanguageSwitcher = ({ setLanguage }) => {
-  return (
-    <div className="language-switcher">
-      <button onClick={() => setLanguage('fr')}>Français</button>
-      <button onClick={() => setLanguage('en')}>English</button>
-    </div>
-  );
-};
+
 
 const Reglages = () => {
-  const [language, setLanguage] = useState('fr');
+  
 
   return (
     <div className="reglages-container">
-      <h1>{language === 'fr' ? 'Paramètres' : 'Settings'}</h1>
-      <LanguageSwitcher setLanguage={setLanguage} />
-      <ChangePassword language={language} />
-      <ChangeUsername language={language} />
+      <li>
+          <a className="logoo">
+            <img src="./Pic/photo2.jpg" alt="Logo"/>
+            <span className="nav-item">User</span>
+          </a>
+        </li>
+    
+      <ChangePassword  />
+      <ChangeUsername  />
     </div>
   );
 };

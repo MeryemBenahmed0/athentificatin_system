@@ -24,6 +24,9 @@ const LineChart = () => {
     ];
 
     return (
+        
+        <section className="attendance">
+        <div className="attendance-list">
         <div className='lin' style={{ height: '80vh', backgroundColor: '#f0f0f0', padding: '20px' }}>
             <h2 style={{ textAlign: 'center' }}>My line chart</h2>
             <div style={{ height: 'calc(100% - 40px)', width: '165vh' }} onClick={toggleSidebar}>
@@ -50,7 +53,7 @@ const LineChart = () => {
                         legendOffset: -40,
                         legendPosition: 'middle',
                     }}
-                    colors={['green']} // Changer la couleur de la ligne en vert
+                    colors={['#6E72FF']} // Changer la couleur de la ligne en vert
                     lineWidth={4} // Rendre la ligne plus large
                     pointSize={10}
                     pointColor={{ theme: 'background' }}
@@ -86,7 +89,7 @@ const LineChart = () => {
                     ]}
                 />
             </div>
-        </div>
+        </div></div></section>
     );
 };
 
